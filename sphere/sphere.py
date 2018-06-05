@@ -184,3 +184,4 @@ class vMFSample():
         self.y = tp[1]
         self.z = tp[2]
         self.kappa = kappa
+        self.sample = sample
