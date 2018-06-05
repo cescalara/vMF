@@ -20,22 +20,23 @@ functions {
 
 data {
 
-  int N;
-  unit_vector[3] data[N];
+  int<lower=0> N;
+  unit_vector[3] d[N];
   
 }
 
 parameters {
 
   unit_vector[3] mu;
-  real kappa;
+  real<lower=0> kappa;
   
 }
 
 model {
 
   for (i in 1:N) {
-    data[i] ~ vMF(mu, kappa);
+    d[i] ~ vMF(mu, kappa);
   }
 
+  //kappa ~ normal(100, 5);
 }
