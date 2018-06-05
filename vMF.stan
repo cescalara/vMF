@@ -84,4 +84,15 @@ functions {
   }
 
 
+  /**
+   * Define the vMF PDF.
+   * NB: cannot be vectorised.
+   */
+  real vMF_lpdf(vector v, vector mu, real kappa) {
+
+    real lprob = kappa * dot_product(v, mu) + log(kappa) - log(4 * pi() * sinh(kappa));
+    return lprob;
+    
+  }
+  
 }
