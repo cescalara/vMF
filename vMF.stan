@@ -57,7 +57,7 @@ functions {
       z = beta_rng(sdim / 2, sdim / 2);
       w = (1 - (1 + b) * z) / (1 - (1 - b) * z);
       u = uniform_rng(0, 1);
-      if (kappa * w + dim * log(1 - x * w) - c >= log(u)) {
+      if (kappa * w + sdim * log(1 - x * w) - c >= log(u)) {
 	i = 1;
       }
     }
