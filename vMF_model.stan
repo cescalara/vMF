@@ -38,5 +38,4 @@ model {
     d[i] ~ vMF(mu, kappa);
   }
 
-  //kappa ~ normal(100, 5);
 }
