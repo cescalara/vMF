@@ -93,7 +93,7 @@ functions {
 
     real lprob;
     if (kappa > 100) {
-      lprob = kappa * dot_product(v, mu) + log(kappa) - log(4 * pi()) - kappa - log(2);
+      lprob = kappa * dot_product(v, mu) + log(kappa) - log(4 * pi()) - kappa + log(2);
     }
     else {
       lprob = kappa * dot_product(v, mu) + log(kappa) - log(4 * pi() * sinh(kappa));
